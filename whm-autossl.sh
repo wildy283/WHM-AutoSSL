@@ -8,8 +8,8 @@ if ! command -V socat > /dev/null 2>&1; then
   echo "Socat not installed, install it and try again !"; exit
 fi
 
-check_domain_ip=$( curl -s --ipv4 --url "https://api1.wildy.us/host2ip?domain=${hostnames1}")
-geturip=$( curl -s --ipv4 --url "https://api1.wildy.us/myip" )
+check_domain_ip=$( curl -s --ipv4 --url "https://api1.wildy.id/host2ip?domain=${hostnames1}")
+geturip=$( curl -s --ipv4 --url "https://api1.wildy.id/myip" )
 
 if [[ $check_domain_ip == $geturip ]]; then
   read -p "Email address : " emails
